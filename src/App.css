@@ -72,6 +72,10 @@
   height: 25%;
   background-color: #3a31b1;
   border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: end;
 }
 
 .App__c2__r1 {
@@ -79,6 +83,9 @@
   height: 15%;
   background-color: #2c2c2c;
   border-radius: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .App__c2__r2 {
@@ -96,6 +103,9 @@
   height: 45%;
   background-color: #2c2c2c;
   border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .App__c3__r1 {
@@ -103,6 +113,11 @@
   height: 20%;
   background-color: #2c2c2c;
   border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .App__c3__r2 {
@@ -181,6 +196,65 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.App__c1__r3__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.App__c1__r3__desc {
+  font-size: 1rem;
+  font-weight: 200;
+  margin-left: 1rem;
+}
+
+.App__c2__r3__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 1.5rem;
+}
+
+.App__c1__r3 button {
+  background-color: black;
+  border: none;
+  color: white;
+  width: 40%;
+  height: 20%;
+  border-radius: 50px;
+  margin-right: 0.5rem;
+  border-top-right-radius: 0;
+}
+
+.App__c2__r1__cost {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.App__c2__r3__dates {
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.App__c2__r3__date {
+  width: 6.5rem;
+  height: 7.5rem;
+  border-radius: 20px;
+  background-color: black;
+}
+
+.App__c3__r1__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.App__c3__r1__desc {
+  font-size: 1rem;
+  font-weight: 200;
 }
 
 /* --------------------------------------------------------------------------------- */
