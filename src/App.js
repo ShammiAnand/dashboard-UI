@@ -10,6 +10,8 @@ import LinearProgress from "@mui/material/LinearProgress";
 import Switch from "@mui/material/Switch";
 import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import CircularProgress from "@mui/material/CircularProgress";
 
 function App() {
   function stringToColor(string) {
@@ -102,10 +104,11 @@ function App() {
             <p className="App__c2__r1__cost">$92,983</p>
 
             <LinearProgress
-              value={50}
+              value={75}
+              variant="determinate"
               style={{
                 marginTop: "1rem",
-                backgroundColor: "#ee515a",
+                backgroundColor: "white",
               }}
             />
           </div>
@@ -254,7 +257,7 @@ function App() {
               <p className="App__c3__r2__title">Transaction Details</p>
               <p className="App__c3__r2__desc">Hi, Hira</p>
             </div>
-            <Avatar {...stringAvatar("Hira Kumar")} />
+            <Avatar {...stringAvatar("Hira Raj")} />
           </div>
           <div
             style={{
@@ -283,8 +286,64 @@ function App() {
           <button>Send</button>
         </div>
         <div className="App__c3__r3">
-          <div className="App__c3__r3__c1">Proj Detail</div>
-          <div className="App__c3__r3__c2">Proj Progress</div>
+          <div className="App__c3__r3__c1">
+            <div
+              style={{
+                width: "90%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <p className="App__c3__r3__desc">Project Details</p>
+              <MoreVertIcon />
+            </div>
+            <div>
+              <p className="App__c1__r1__title">Hira R.</p>
+              <p className="App__c3__r3__desc">UI/UX designer</p>
+            </div>
+            <div>
+              <p className="App__c3__r3__desc">Progress</p>
+              <LinearProgress
+                value={75}
+                variant="determinate"
+                style={{
+                  width: "100%",
+                  marginLeft: "1.5rem",
+                  marginTop: "1rem",
+                  backgroundColor: "white",
+                }}
+              />
+            </div>
+          </div>
+          <div className="App__c3__r3__c2">
+            <div
+              style={{
+                width: "90%",
+                height: "30%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <p className="App__c3__r3__desc">Project Progress</p>
+              <MoreVertIcon />
+            </div>
+            <div
+              style={{
+                width: "100%",
+                height: "50%",
+              }}
+            >
+              <CircularProgress
+                variant="determinate"
+                value={75}
+                style={{
+                  width: "50%",
+                }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </div>
