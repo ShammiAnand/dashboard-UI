@@ -3,27 +3,134 @@
   height: 100vh;
   background-color: black;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
 .App__c1 {
   width: 18vw;
-  height: 90vh;
-  background-color: #2c2c2c;
+  height: 95vh;
+  /* background-color: #2c2c2c; */
   border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .App__c2 {
   width: 30vw;
-  height: 90vh;
-  background-color: #2c2c2c;
+  height: 95vh;
+  /* background-color: #2c2c2c; */
   border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .App__c3 {
   width: 38vw;
-  height: 90vh;
+  height: 95vh;
+  /* background-color: #2c2c2c; */
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.App__c1__r1 {
+  width: 90%;
+  height: 25%;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+}
+.App__c1__r2 {
+  width: 90%;
+  height: 40%;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+}
+.App__c1__r3 {
+  width: 90%;
+  height: 25%;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+}
+
+.App__c2__r1 {
+  width: 90%;
+  height: 15%;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+}
+
+.App__c2__r2 {
+  width: 90%;
+  height: 30%;
+  /* background-color: #2c2c2c; */
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.App__c2__r3 {
+  width: 90%;
+  height: 45%;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+}
+
+.App__c3__r1 {
+  width: 90%;
+  height: 20%;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+}
+
+.App__c3__r2 {
+  width: 90%;
+  height: 40%;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+}
+
+.App__c3__r3 {
+  width: 90%;
+  height: 30%;
+  /* background-color: #2c2c2c; */
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.App__c2__r2__c1 {
+  width: 45%;
+  height: 100%;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+}
+
+.App__c2__r2__c2 {
+  width: 45%;
+  height: 100%;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+}
+
+.App__c3__r3__c1 {
+  width: 50%;
+  height: 100%;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+}
+
+.App__c3__r3__c2 {
+  width: 40%;
+  height: 100%;
   background-color: #2c2c2c;
   border-radius: 50px;
 }
