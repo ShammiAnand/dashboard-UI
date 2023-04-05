@@ -1,0 +1,50 @@
+.App {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.App__c1 {
+  width: 18vw;
+  height: 90vh;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+}
+
+.App__c2 {
+  width: 28vw;
+  height: 90vh;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+}
+
+.App__c3 {
+  width: 38vw;
+  height: 90vh;
+  background-color: #2c2c2c;
+  border-radius: 50px;
+}
+
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;
+  }
+  .App__c1 {
+    width: 90vw;
+    height: 18vh;
+    margin-bottom: 10px;
+  }
+  .App__c2 {
+    width: 90vw;
+    height: 28vh;
+    margin-bottom: 10px;
+  }
+  .App__c3 {
+    width: 90vw;
+    height: 38vh;
+    margin-bottom: 10px;
+  }
+}
