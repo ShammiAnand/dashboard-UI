@@ -6,8 +6,41 @@ import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined
 import BarChartOutlinedIcon from "@mui/icons-material/BarChartOutlined";
 import InsertDriveFileOutlinedIcon from "@mui/icons-material/InsertDriveFileOutlined";
 import MonetizationOnIcon from "@mui/icons-material/MonetizationOn";
+import LinearProgress from "@mui/material/LinearProgress";
+import Switch from "@mui/material/Switch";
+import Avatar from "@mui/material/Avatar";
+import AvatarGroup from "@mui/material/AvatarGroup";
 
 function App() {
+  function stringToColor(string) {
+    let hash = 0;
+    let i;
+
+    /* eslint-disable no-bitwise */
+    for (i = 0; i < string.length; i += 1) {
+      hash = string.charCodeAt(i) + ((hash << 5) - hash);
+    }
+
+    let color = "#";
+
+    for (i = 0; i < 3; i += 1) {
+      const value = (hash >> (i * 8)) & 0xff;
+      color += `00${value.toString(16)}`.slice(-2);
+    }
+    /* eslint-enable no-bitwise */
+
+    return color;
+  }
+
+  function stringAvatar(name) {
+    return {
+      sx: {
+        bgcolor: stringToColor(name),
+      },
+      children: `${name.split(" ")[0][0]}${name.split(" ")[1][0]}`,
+    };
+  }
+
   return (
     <div className="App">
       <div className="App__c1">
@@ -71,26 +104,136 @@ function App() {
           <div>
             <p className="App__c2__r1__title">Total Revenue</p>
             <p className="App__c2__r1__cost">$92,983</p>
+
+            <LinearProgress
+              value={50}
+              style={{
+                marginTop: "1rem",
+                backgroundColor: "#ee515a",
+              }}
+            />
           </div>
         </div>
         <div className="App__c2__r2">
-          <div className="App__c2__r2__c1">Travel</div>
-          <div className="App__c2__r2__c2">Hotel</div>
+          <div className="App__c2__r2__c1">
+            <div>
+              <p className="App__c2__r2__c1__title">Travel</p>
+              <p className="App__c2__r2__c1__desc">Mobile Application</p>
+            </div>
+            <div>
+              <p className="App__c2__r2__c1__desc">Seen by</p>
+              <AvatarGroup max={3} style={{ marginLeft: "1rem" }}>
+                <Avatar {...stringAvatar("Kent Dodds")} />
+                <Avatar {...stringAvatar("Jed Watson")} />
+                <Avatar {...stringAvatar("Tim Neutkens")} />
+                <Avatar {...stringAvatar("Tim Neutkens")} />
+              </AvatarGroup>
+            </div>
+          </div>
+          <div className="App__c2__r2__c2">
+            <div>
+              <p className="App__c2__r2__c1__title">Hotel</p>
+              <p className="App__c2__r2__c1__desc">Dashboard</p>
+            </div>
+            <div>
+              <p className="App__c2__r2__c1__desc">Seen by</p>
+              <AvatarGroup max={3} style={{ marginLeft: "1rem" }}>
+                <Avatar {...stringAvatar("Kent Dodds")} />
+                <Avatar {...stringAvatar("Jed Watson")} />
+                <Avatar {...stringAvatar("Tim Neutkens")} />
+                <Avatar {...stringAvatar("Tim Neutkens")} />
+              </AvatarGroup>
+            </div>
+          </div>
         </div>
         <div className="App__c2__r3">
-          <p className="App__c2__r3__title">Free Slots Available</p>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <p className="App__c2__r3__title">Free Slots Available </p>
+            <Switch defaultChecked />
+          </div>
           <div className="App__c2__r3__dates">
             <div
               className="App__c2__r3__date"
               style={{
                 backgroundColor: "#ee515a",
               }}
-            ></div>
-            <div className="App__c2__r3__date"></div>
-            <div className="App__c2__r3__date"></div>
-            <div className="App__c2__r3__date"></div>
-            <div className="App__c2__r3__date"></div>
-            <div className="App__c2__r3__date"></div>
+            >
+              <p
+                style={{
+                  fontWeight: "600",
+                  fontSize: "2rem",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                12
+              </p>
+              <p>Jun</p>
+            </div>
+            <div className="App__c2__r3__date">
+              <p
+                style={{
+                  fontWeight: "600",
+                  fontSize: "2rem",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                12
+              </p>
+              <p>Jun</p>
+            </div>
+            <div className="App__c2__r3__date">
+              <p
+                style={{
+                  fontWeight: "600",
+                  fontSize: "2rem",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                12
+              </p>
+              <p>Jun</p>
+            </div>
+            <div className="App__c2__r3__date">
+              <p
+                style={{
+                  fontWeight: "600",
+                  fontSize: "2rem",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                12
+              </p>
+              <p>Jun</p>
+            </div>
+            <div className="App__c2__r3__date">
+              <p
+                style={{
+                  fontWeight: "600",
+                  fontSize: "2rem",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                12
+              </p>
+              <p>Jun</p>
+            </div>
+            <div className="App__c2__r3__date">
+              <p
+                style={{
+                  fontWeight: "600",
+                  fontSize: "2rem",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                12
+              </p>
+              <p>Jun</p>
+            </div>
           </div>
         </div>
       </div>
