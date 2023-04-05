@@ -15,20 +15,16 @@ function App() {
   function stringToColor(string) {
     let hash = 0;
     let i;
-
     /* eslint-disable no-bitwise */
     for (i = 0; i < string.length; i += 1) {
       hash = string.charCodeAt(i) + ((hash << 5) - hash);
     }
-
     let color = "#";
-
     for (i = 0; i < 3; i += 1) {
       const value = (hash >> (i * 8)) & 0xff;
       color += `00${value.toString(16)}`.slice(-2);
     }
     /* eslint-enable no-bitwise */
-
     return color;
   }
 
@@ -246,7 +242,46 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="App__c3__r2">Transaction details</div>
+        <div className="App__c3__r2">
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              width: "90%",
+            }}
+          >
+            <div>
+              <p className="App__c3__r2__title">Transaction Details</p>
+              <p className="App__c3__r2__desc">Hi, Hira</p>
+            </div>
+            <Avatar {...stringAvatar("Hira Kumar")} />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              width: "90%",
+            }}
+          >
+            <div>
+              <p className="App__c3__r2__title">$4763.40</p>
+              <p className="App__c3__r2__desc">Available Balance</p>
+            </div>
+            <p className="App__c3__r2__desc">**** 3567</p>
+          </div>
+          <AvatarGroup
+            max={5}
+            style={{ marginLeft: "1.5rem", marginRight: "auto" }}
+          >
+            <Avatar {...stringAvatar("Kent Dodds")} />
+            <Avatar {...stringAvatar("Jed Watson")} />
+            <Avatar {...stringAvatar("Tim Neutkens")} />
+            <Avatar {...stringAvatar("Jed Watson")} />
+            <Avatar {...stringAvatar("Tim Neutkens")} />
+            <Avatar {...stringAvatar("Tim Neutkens")} />
+          </AvatarGroup>
+          <button>Send</button>
+        </div>
         <div className="App__c3__r3">
           <div className="App__c3__r3__c1">Proj Detail</div>
           <div className="App__c3__r3__c2">Proj Progress</div>
